@@ -1,22 +1,19 @@
 ---
 interface Props {
-	title: string;
-	body: string;
+    icon: string;
+    title: string;
+    body: string;
 }
 
-const {body, title,} = Astro.props;
+const {body, title, icon} = Astro.props;
 ---
-
 <li class="link-card">
-	<div>
-		<h2 class="text-2xl font-bold tracking-tight">
-            {title}
-		</h2>
-	<p class="font-normal text-gray-300">
-			{body}
-		</p>
-	</a>
-</div>
+    <div>
+        <h2 class="text-2xl font-bold tracking-tight">
+            <i class={icon}></i>
+            {title}</h2>
+        <p class="font-normal text-gray-300">{body}</p>
+    </div>
 </li>
 <style>
 	.link-card {
