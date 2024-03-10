@@ -5,12 +5,16 @@ import Botones from '../components/botones.astro';
 import Header from '../components/header.astro';
 import CardInfo from '../components/card-info.astro';
 import Accordion from '../components/accordion.astro';
-import PRECIOS from '../components/precios.astro';
+import REDES from '../components/REDES.astro';
+import Footer from '../components/Footer.astro';
+import Precios from '../components/precios.astro';
+import PreciosWeb from '../components/preciosWeb.astro';
+import Formulario from '../components/formulario.astro';
 ---
 
 <Layout title="MarMax.">
 	<!--Header escritorio-->
-	<header>
+	<header id="home">
 		<!--Nav hecha con componente header -->
 	<Header />
 		<!--Primera pagina-->		
@@ -25,8 +29,8 @@ import PRECIOS from '../components/precios.astro';
 			<footer class="m-5">
 				<h2 class="text-center text-white text-xl sm:text-2xl font-medium">🚀 Desata el Poder Digital de tu Emprendimiento</h2>
 				<div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-5 flex-wrap card-container ">
-					<Card title="Quiero mejorar la estetica de mis redes" body="Edicion de contenido audiovisual" href=""/>
-					<Card title="Quiero diseñar la pagina web de mi negocio" body="Desarrollo de paginas web" href=""/>
+					<Card title="Quiero mejorar la estetica de mis redes" body="Edicion de contenido audiovisual" href="#articuloAudiovisual"/>
+					<Card title="Quiero diseñar la pagina web de mi negocio" body="Desarrollo de paginas web" href="#articuloDiseñoWeb"/>
 				</div>
 			</footer>
 		</section>
@@ -36,211 +40,246 @@ import PRECIOS from '../components/precios.astro';
 		<!--section que ofrece los productos -->
 		<section class="w-100vh">
 			<!--HEADER SECTION -->
-			<header class="flex flex-col justify-center items-center min-h-screen">
-				<h2 class="text-center text-white text-2xl sm:text-4xl">Nuestros Servicios</h2>
+			<header id="servicios" class="flex flex-col justify-center items-center min-h-screen">
+				<h2  class="text-center text-white text-2xl sm:text-4xl">Nuestros <span class="text-gradient">Servicios</span></h2>
 				<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">En MarMax, entendemos que cada emprendedor busca más que servicios; buscan una revolución digital que eleve su marca. 💻✨</p>				
 			</header>
 			<!--SERVICIOS -->
 			<main>
-				<article class="text-white min-h-screen">
+				<!--EDICION DE CONTENIDO AUDIOVISUAL -->
+				<article id="articuloAudiovisual" class="text-white min-h-screen">
 					<header>
 						<h2 class="text-center m-8 text-3xl sm:text-4xl font-bold">Edicion de Contenido <span class="text-gradient">Audiovisual</span></h2>
 					</header>
-					<!--MAIN AUDIOVISUAL -->
 					<main>
-						<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+						<!--MAIN AUDIOVISUAL -->
+						<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
 							<CardInfo 
-							title="Narrativa Impactante" 
-							body="Creamos historias cautivadoras y emocionantes, conectando emocionalmente con tu audiencia y dejando una impresión duradera."
+							title="Creando historias cautivadoras" 
+							body="Conectamos emocionalmente con tu audiencia y dejamos una impresión duradera."
 							icon="bi bi-pencil"
 							/>
 							<CardInfo 
 							icon="bi bi-palette"
-							title="Estilo Visual Único" 
-							body="Desarrollamos un estilo visual distintivo que refleja la personalidad de tu marca y se destaca en un mercado saturado."
+							title="Desarrollando un estilo visual distintivo" 
+							body="Reflejamos la personalidad de tu marca y nos destacamos en un mercado saturado."
 							/>
 							<CardInfo 
 							icon="bi bi-zoom-in"
-							title="Efectos Visuales de Alta Calidad" 
-							body="Incorporamos efectos visuales y gráficos de alta calidad que mejoran la apariencia y el atractivo de tu contenido."
+							title="Incorporando efectos visuales de alta calidad" 
+							body="Mejoramos la apariencia y el atractivo de tu contenido con efectos visuales y gráficos de alta calidad."
 							/>
 							<CardInfo 
 							icon="bi bi-film"
-							title="Edición Dinámica y Creativa" 
-							body="Utilizamos técnicas de edición innovadoras y creativas para dar vida a tu contenido y mantener a tu audiencia comprometida."
+							title="Editando de manera dinámica y creativa" 
+							body="Damos vida a tu contenido y mantenemos a tu audiencia comprometida con técnicas de edición innovadoras y creativas."
 							/>
 							<CardInfo 
 							icon="bi bi-laptop"
-							title="Optimización para Plataformas Digitales" 
-							body="Adaptamos tu contenido para diferentes plataformas digitales, maximizando su alcance e impacto."
+							title="Adaptando tu contenido para diferentes plataformas digitales" 
+							body="Maximizamos su alcance e impacto en diferentes plataformas digitales."
 							/>
 							<CardInfo 
 							icon="bi bi-music-note"
-							title="Música y Sonido Envolvedor" 
-							body="Incorporamos música y sonido envolventes que complementan tu contenido y lo hacen más memorable."
+							title="Incorporando música y sonido envolventes" 
+							body="Complementamos tu contenido y lo hacemos más memorable con música y sonido envolventes."
 							/> 
 							<CardInfo 
 							icon="bi bi-clock"
-							title="Entrega Eficiente y Profesional" 
-							body="Entregamos tu contenido de manera rápida y profesional, asegurando una experiencia sin problemas desde la edición hasta la publicación."
+							title="Entregando de manera eficiente y profesional" 
+							body="Aseguramos una experiencia sin problemas desde la edición hasta la publicación."
 							/>
-							<CardInfo 
-							icon="bi bi-gear"
-							title="Innovación Tecnológica" 
-							body="Nuestro producto utiliza las últimas tecnologías para ofrecer un rendimiento excepcional y una experiencia de usuario inigualable."
-							/>
+							
 							<CardInfo 
 							icon="bi bi-chat-dots"
-							title="Soporte Profesional" 
-							body="Ofrecemos un equipo de soporte técnico altamente capacitado y disponible para resolver cualquier duda o problema que pueda surgir, garantizando una experiencia de compra sin preocupaciones."
+							title="Ofreciendo un soporte técnico altamente capacitado" 
+							body="Resolvemos cualquier duda o problema que pueda surgir, garantizando una experiencia de compra sin preocupaciones."
 							/>
-						</ul>	
+						</ul>
+						<div>
+							<h2 class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance ">Preguntas Frecuentes</h2>
+							<Accordion
+							titulo1='¿Por qué es crucial la edición de contenido audiovisual?'
+							body1='La edición de contenido audiovisual es crucial para mejorar la calidad y el atractivo de tu contenido, lo que aumenta su impacto y su capacidad para atraer y retener a tu audiencia. La edición creativa y dinámica puede hacer que tu contenido sea más memorable y efectivo, lo que puede resultar en un mayor compromiso y una mayor conversión.'
+							titulo2='¿Cómo puede la edición de contenido audiovisual mejorar la calidad de mi contenido?'
+							body2='La edición de contenido audiovisual puede mejorar la calidad de tu contenido al eliminar errores, mejorar la coherencia y la fluidez, y añadir efectos visuales y gráficos de alta calidad. La edición también puede mejorar la narrativa y la estructura de tu contenido, lo que puede hacer que sea más atractivo y efectivo.'
+							titulo3='¿Beneficios de la edición de contenido audiovisual para tu marca?'
+							body3= 'La edición de contenido audiovisual aporta varios beneficios a tu marca, como un mayor impacto, una mayor retención de la audiencia, una mayor conversión y una mayor fidelidad del cliente. La edición creativa y dinámica hace que tu contenido sea más memorable y efectivo, lo que puede resultar en un mayor compromiso y una mayor conversión'	
+							/>
+							<Accordion
+							titulo1='¿Por qué debería elegir los servicios de edición de contenido de Marmax?'
+							body1= 'En Marmax, nos destacamos por ofrecer servicios de edición de contenido audiovisual de alta calidad, con un enfoque en la narrativa impactante, el estilo visual único y la creatividad dinámica. Nuestra experiencia y compromiso con la excelencia nos convierten en la elección ideal para transformar tu contenido y cautivar a tu audiencia.'
+							titulo2='¿Qué tipo de contenido audiovisual pueden editar en Marmax?'
+							body2='En Marmax, podemos editar una amplia variedad de contenido audiovisual, incluyendo videos promocionales, comerciales, contenido para redes sociales, videos educativos, entre otros. Nuestro equipo está capacitado para trabajar con diferentes estilos y géneros para satisfacer tus necesidades específicas.'
+							titulo3='¿Cuál es el tiempo de entrega de los servicios de edición de contenido de Marmax?'
+							body3= 'El tiempo de entrega de nuestros servicios de edición de contenido depende del proyecto específico y de sus requerimientos. Sin embargo, nos esforzamos por ofrecer una entrega rápida y eficiente para garantizar que tu contenido esté listo para ser publicado en el menor tiempo posible.'
+							/>
+						</div>
 					</main>
 					<footer>
-						<section class="text-white py-12 flex flex-col justify-center items-center">
+						<section class="text-white py-12 flex flex-col justify-center items-center min-h-screen">
 							<h2 class="text-center text-2xl sm:text-4xl mb-8">¿Listo para llevar el <span class="text-gradient">Contenido Audiovisual </span>de tu marca al siguiente nivel?</h2>
-							<Botones body='Consultar'/>
+							<Botones 
+							body='Consultar'
+							url="#preciosEdicion"
+							/>
 						</section>
 					</footer>
 				</article>
-				<article class="text-white min-h-screen">
+				<!--DESARROLLO WEB -->
+				<article id="articuloDiseñoWeb" class="text-white min-h-screen">
 					<header>
 						<h2 class="text-center m-8 text-3xl sm:text-4xl font-bold ">Desarrollo de <span class="text-gradient">Sitios Web</span></h2>
 					</header>
 					<main>
 
-						<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+						<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
 							<CardInfo
 							icon="bi bi-globe"
-							title="Presencia Online Profesional" 
-							body="Destaca con un sitio web profesional y atractivo que refleje la identidad única de tu marca, creando una impresión duradera en tus visitantes desde el primer clic."
-							/>
-							<CardInfo
-							icon="bi bi-gem" 
-							title="Experiencia de Usuario Mejorada" 
-							body="Proporciona una navegación intuitiva y placentera en todos los dispositivos, garantizando que cada visita sea una experiencia memorable que impulse la fidelidad del cliente."
+							title="Sitio Web Profesional" 
+							body="Destaca con un sitio web que refleje la identidad de tu marca, creando una impresión duradera en tus visitantes."
 							/>
 							<CardInfo
 							icon="bi bi-graph-up" 
 							title="Optimización para Motores de Búsqueda (SEO)" 
-							body="Mejora tu visibilidad en los motores de búsqueda y aumenta tu tráfico orgánico con estrategias SEO efectivas, posicionando tu negocio frente a clientes potenciales interesados."
+							body="Mejora tu visibilidad en los motores de búsqueda con estrategias SEO efectivas, posicionando tu negocio frente a clientes potenciales."
 							/>
 							<CardInfo 
 							icon="bi bi-arrow-up-right"
 							title="Crecimiento Escalable" 
-							body="Diseña un sitio web que crezca con tu negocio y se adapte a tus necesidades futuras, asegurando que siempre estés un paso adelante en un mercado en constante evolución."
+							body="Diseña un sitio web que crezca con tu negocio, asegurando que siempre estés un paso adelante en un mercado en constante evolución."
 							/>
 							<CardInfo
 							icon="bi bi-shield-check" 
 							title="Seguridad y Protección"
-							body="Mantén tu sitio web protegido contra amenazas en línea con las últimas medidas de seguridad, transmitiendo confianza y seguridad a tus visitantes."
+							body="Mantén tu sitio web protegido contra amenazas en línea con las últimas medidas de seguridad."
 							/>
 							<CardInfo
 							icon="bi bi-arrow-clockwise" 
 							title="Actualizaciones Continuas" 
-							body="Recibe actualizaciones regulares y mantenimiento para garantizar que tu sitio web esté siempre al día y funcionando sin problemas, brindando una experiencia óptima a tus usuarios en todo momento."
+							body="Recibe actualizaciones regulares para garantizar que tu sitio web esté siempre al día y funcionando sin problemas."
 							/>
 							<CardInfo
 							icon="bi bi-share" 
 							title="Integración con Redes Sociales" 
-							body="Conecta con tus seguidores de manera efectiva integrando tus perfiles de redes sociales en tu sitio web, aumentando la interacción y ampliando tu alcance en línea."
+							body="Conecta con tus seguidores integrando tus perfiles de redes sociales en tu sitio web."
 							/>
 							<CardInfo
 							icon="bi bi-people" 
 							title="Aumento de la Visibilidad y Alcance" 
-							body="Aprovecha la oportunidad de llegar a una audiencia más amplia y diversa que los medios tradicionales, expandiendo tu base de clientes y aumentando tus ventas de manera significativa."
+							body="Aprovecha la oportunidad de llegar a una audiencia más amplia y diversa que los medios tradicionales."
 							/>
 							<CardInfo
 							icon="bi bi-envelope" 
 							title="Facilita la Comunicación y el Contacto" 
-							body="Proporciona a tus clientes un canal directo para obtener información y ponerse en contacto contigo, facilitando la comunicación y mejorando la experiencia del cliente."
+							body="Proporciona a tus clientes un canal directo para obtener información y ponerse en contacto contigo."
 							/>
 						</ul>
+						
+						<article>
+							<h2 class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">Preguntas Frecuentes</h2>
+							<Accordion
+							titulo1='¿Mi negocio deberia que tener un sitio web?'
+							body1='Un sitio web es esencial para tu negocio porque te ayuda a ser encontrado en línea, mejorar tu clasificación en los motores de búsqueda y mostrar tu marca de manera profesional. Con una estrategia de SEO sólida, tu sitio web puede atraer más tráfico orgánico, aumentar la confianza de los clientes y facilitar la toma de decisiones de compra.'
+							titulo2='¿Qué estaría perdiendo si no tengo un sitio web?'
+							body2='Sin un sitio web, pierdes la oportunidad de ser encontrado fácilmente en línea y de mostrar tus productos o servicios de manera atractiva. Estar ausente en la web significa perder clientes potenciales y limitar tu crecimiento. ¡No te pierdas la oportunidad de destacar y crecer con un sitio web impactante!"'
+							titulo3='¿Cómo puedo estar disponible para tus clientes las 24 horas del dia, los 7 días de la semana?'
+							body3= 'Un sitio web te permite estar disponible en línea en todo momento, incluso cuando tu negocio está cerrado. Esto significa que los clientes pueden acceder a información sobre tus productos y servicios en cualquier momento, lo que puede generar más ventas y oportunidades de negocio.'
+							/>
+							<Accordion
+							titulo1='¿Qué beneficios ofrece la optimización para motores de búsqueda (SEO)?'
+							body1= 'La optimización para motores de búsqueda (SEO) mejora tu visibilidad en los motores de búsqueda y aumenta tu tráfico orgánico. Con estrategias SEO efectivas, posicionas tu negocio frente a clientes potenciales interesados, aumentando así tus oportunidades de venta.'
+							titulo2='¿Qué tipo de sitios web pueden desarrollar en Marmax?'
+							body2='En Marmax, podemos desarrollar una amplia variedad de sitios web, incluyendo sitios web corporativos, tiendas en línea, blogs, portafolios, entre otros. Nuestro equipo está capacitado para trabajar con diferentes plataformas y tecnologías para satisfacer tus necesidades específicas.'
+							titulo3='¿Cuál es el tiempo de entrega de los servicios de desarrollo web de Marmax?'
+							body3= 'El tiempo de entrega de nuestros servicios de desarrollo web depende del proyecto específico y de sus requerimientos. Sin embargo, nos esforzamos por ofrecer una entrega rápida y eficiente para garantizar que tu sitio web esté listo para ser lanzado en el menor tiempo posible.'
+							/>
+
+						</article>
 					    </main>
 						<footer>
-							<section class="text-white py-12 flex flex-col justify-center items-center">
+							<section class="text-white py-12 flex flex-col justify-center items-center min-h-screen">
 								<h2 class="text-center text-2xl sm:text-4xl mb-8">¿Listo para tener tu propio <span class="text-gradient">Sitio Web</span>?</h2>
-								<Botones body='Consultar'/>
+								<Botones 
+								body='Consultar'
+								url= "#preciosDesarrolloWeb"
+								/>
 							</section>
 						</footer>
 					</article>
 				
-					<!--PRECIOS -->
-					<section class="">
-						<!--Header precios -->
-						<header>
-							<h3 class="text-center m-8 text-3xl sm:text-4xl font-bold text-white">Precios</h3>
+				</section>
+
+				<!--SECTION PRECIOS -->
+				<section id="precios">
+					<!--Header precios -->
+					<header>
+						<h3 class="text-center m-8 text-3xl sm:text-4xl font-bold text-white">Kit edicion de contenido</h3>
+					</header>
+					<main>
+						<!--Edicion de contenido precios -->
+						<article class="min-h-screen" id="preciosEdicion">
+							<header>
+							<h2 class="text-center m-8 text-3xl sm:text-4xl font-bold text-white"></h2>
 						</header>
 						<main>
-							<!--Edicion de contenido precios -->
-							<article class="min-h-screen">
-								<header>
-								<h2 class="text-center m-8 text-3xl sm:text-4xl font-bold text-white"></h2>
-							</header>
-							<main>
-								<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-									<li>
-										<PRECIOS
-											title="Narrativa Impactante"
-											body="Creamos historias cautivadoras y emocionantes, conectando emocionalmente con tu audiencia y dejando una impresión duradera."
-											price="$100"
-										/>
-									</li>
-									<li>
-										<PRECIOS
-											title="Narrativa Impactante"
-											body="Creamos historias cautivadoras y emocionantes, conectando emocionalmente con tu audiencia y dejando una impresión duradera."
-											price="$100"
-										/>
-									</li>
-								</ul>
-							</main>
-						</article>
-						<!--Desarrollo web precios -->
-						<article>
-							<header>
-								<h2 class="text-center m-8 text-3xl sm:text-4xl font-bold text-white"></h2>
-							</header>
-							<main>
-								<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-									<!--MAIN DE PRECIOS DESARROLLO WEB -->
-									<PRECIOS
-									title="Narrativa Impactante"
-									body="Creamos historias cautivadoras y emocionantes, conectando emocionalmente con tu audiencia y dejando una impresión duradera."
-									price="$100"
-									/>
-									<PRECIOS
-									title="Narrativa Impactante"
-									body="Creamos historias cautivadoras y emocionantes, conectando emocionalmente con tu audiencia y dejando una impresión duradera."
-									price="$100"
-									/>
-									<PRECIOS
-									title="Narrativa Impactante"
-									body="Creamos historias cautivadoras y emocionantes, conectando emocionalmente con tu audiencia y dejando una impresión duradera."
-									price="$100"
-									/>
-								</ul>
-							</main>
-						</article>
-					</main>
-					</section>
-			</section>
-			<!-- PRE-FOOTER -->
-			<section class="pre-footer text-white py-12 flex flex-col justify-center items-center min-h-screen">
-				
-			</section>
-			
+							<ul class="flex justify-center items-center">
+								<Precios/>
+								
+							</ul>
+						</main>
+					</article>
+					<!--Desarrollo web precios -->
+					<article id="preciosDesarrolloWeb" class="min-h-screen">
+						<header>
+							<h2 class="text-center m-8 text-3xl sm:text-4xl font-bold text-white">Kit desarrollo web</h2>
+							<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">En Marmax, valoramos la singularidad de cada emprendedor. Te invitamos a considerar estos precios como una guía inicial y a contactarnos para obtener un presupuesto personalizado que se adapte a tus necesidades específicas.</p>
+						</header>
+						<main>
+							<ul class="flex justify-center items-center">
+								<!--MAIN DE PRECIOS DESARROLLO WEB -->
+								<PreciosWeb
+								/>
+							</ul>
+						</main>
+					</article>
+				</main>
+				</section>
 			<!--Nosotros -->
-			<section class="nosotros">
-
-			</section>
+			<header id="nosotros" class="flex flex-col justify-center items-center min-h-screen">
+				<h2  class="text-center text-white text-2xl sm:text-4xl">Sobre <span class="text-gradient">Nosotros</span></h2>
+				<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">🚀MarMax es mucho más que un proyecto; es nuestra visión de un futuro digital emocionante y lleno de posibilidades. </p>
+					<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">💡 Nuestra filosofía se basa en la innovación constante y la creatividad sin límites, siempre buscando nuevas formas de elevar la presencia digital de nuestros clientes y convertir sus sueños en realidad en el mundo digital.</p>		
+			</header>
 			<!--Contacto -->
-			<section class="contacto">
-
-			</section>
+			<section id="contacto" class="contacto">
+				<article class="text-white py-12 flex flex-col justify-center items-center ">
+					<h2 class="text-center text-2xl sm:text-4xl mb-8 text-gradient">Contactate ya con nosotros</h2>
+					<Formulario />
+					<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">¡Únete a nuestra comunidad en las redes sociales para estar al tanto de todas nuestras novedades, promociones y mucho más!</p>
+					<ul id="redes" class="flex gap-2">
+						<REDES
+						icon='bi bi-facebook'
+						url='https://www.facebook.com/profile.php?id=61555324135923'
+						/>
+						<REDES
+						icon='bi bi-instagram'
+						url='https://www.instagram.com/marmax_design/'
+						/>
+						<REDES
+						icon='bi bi-envelope'
+						url='mailto:marmaxdesignlabs@gmail.com'
+						/>
+					</ul>
+					<h4 class="mt-4"><a href="mailto:Marmaxdesignlabs@gmail.com" class="texthover">Marmaxdesignlabs@gmail.com</a>
+					</h4>
+				</article>
+				</section>
+			
 		</main>
 		<footer>
 			
+			<Footer />
 			<p class="text-white text-center">© 2024 MarMax.</p>
 		</footer>
 	</Layout>
@@ -286,7 +325,7 @@ import PRECIOS from '../components/precios.astro';
 			
 		}
 		.header-desktop li, a:is(:hover, :focus){
-			color: #63e;
+			color: rgb(219, 206, 255);
 		}
 		.edicion-contenido{
 			

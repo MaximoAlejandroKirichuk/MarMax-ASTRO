@@ -1,115 +1,169 @@
 ---
-interface Props {
-	body: string;
-    title: string;
-    price: string;
-}
 
-const {body, title, price} = Astro.props;
 ---
-<div class="card">
-    <div class="header">
-                            <span class="title">{title}</span>
-                            <span class="price">{price}</span>
-                        </div>
-                        <p class="desc">Etiam ac convallis enim, eget euismod dolor.</p>
-                        <ul class="lists">
-                            <li class="list">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Aenean quis</span>
-                            </li>
-                            <li class="list">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Morbi semper</span>
-                            </li>
-                            <li class="list">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span>Tristique enim nec</span>
-                            </li>
-                        </ul>
-                        <button href="sg" type="button" class="action">Pedir mas info</button>
-                    </div>
-<style>
-    .card {
-  margin-left: -1rem;
-  margin-right: -1rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  margin-bottom: 2rem;
-  width: 320px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 0.25rem;
-  background-color: rgba(17, 24, 39, 1);
-  padding: 1.5rem;
-}
+<div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-4">
+<!--basisco -->
+    <div class="flex flex-col w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Kit Basico</h5>
+        <div class="flex items-baseline text-gray-900 dark:text-white">
+            <span class="text-3xl font-semibold">$</span>
+            <span class="text-5xl font-extrabold tracking-tight">50</span>
+            <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400"></span>
+        </div>
+        <ul role="list" class="space-y-5 my-7">
+            <li class="flex items-center">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">10 fotos editadas a elección.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">1 video de duración maxima de 1 minuto.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Entrega en formato digital de alta resolución.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Una revisión de los archivos entregados para posibles ajustes menores.</span>
+            </li> <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Incluye efectos especiales en el video.</span>
+            </li> <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Tiempo de entrega estimado: 5-7 días hábiles.</span>
+            </li>
 
-.header {
-  display: flex;
-  flex-direction: column;
-}
+            <li class="flex line-through decoration-gray-500">
+                <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 ms-3">Edición de fotos adicionales fuera de las especificadas para cada kit.</span>
+            </li>
+        </ul>
+        <a href="#contacto" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-violet-600 hover:bg-violet-700 dark:bg-blue-500 dark:hover:bg-blue-600 mt-auto">Contactar</a>
+        
+    </div>
+<!--Intermedio -->
+    <div class="w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Kit Intermedio</h5>
+        <div class="flex items-baseline text-gray-900 dark:text-white">
+            <span class="text-3xl font-semibold">$</span>
+            <span class="text-5xl font-extrabold tracking-tight">65</span>
+    
+        </div>
+        <ul role="list" class="space-y-5 my-7">
+            <li class="flex items-center">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">20 fotos editadas a elección.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">1 video de duración máxima de 5 minutos.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Entrega en formato digital de alta resolución.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Dos revisiones de los archivos entregados para posibles ajustes menores.</span>
+            </li>
+            
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Incluye efectos especiales avanzados en el video.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Tiempo de entrega estimado: 7-10 días hábiles.</span>
+            </li>
+            <li class="flex line-through decoration-gray-500">
+                <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 ms-3">Edición de fotos adicionales fuera de las especificadas para cada kit.</span>
+            </li>
+        </ul>
+        <a href="#contacto" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-violet-600 hover:bg-violet-700 dark:bg-blue-500 dark:hover:bg-blue-600">Contactar</a>
+    </div>
+<!--Pro -->
+    <div class="flex flex-col w-full max-w-sm p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+        <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">Kit Avanzado</h5>
+        <div class="flex items-baseline text-gray-900 dark:text-white">
+            <span class="text-3xl font-semibold">$</span>
+            <span class="text-5xl font-extrabold tracking-tight">80</span>
+            <span class="ms-1 text-xl font-normal text-gray-500 dark:text-gray-400">/month</span>
+        </div>
+        <ul role="list" class="space-y-5 my-7">
+            <li class="flex items-center">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">25 imágenes editadas a eleccion.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">3 videos de duración máxima de 3 minutos c/u.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Entrega en formato digital de alta resolución.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Tres revisiones de los archivos entregados para posibles ajustes menores.</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Inculye efectos especiales avanzados</span>
+            </li>
+            <li class="flex">
+                <svg class="flex-shrink-0 w-4 h-4 text-violet-600 dark:text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400 ms-3">Tiempo de entrega estimado: 7-10 días hábiles.</span>
+            </li>
+            <li class="flex line-through decoration-gray-500">
+                <svg class="flex-shrink-0 w-4 h-4 text-gray-400 dark:text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="text-base font-normal leading-tight text-gray-500 ms-3">Edición de fotos adicionales fuera de las especificadas para cada kit.</span>
+            </li>
+        </ul>
+        <a href="#contacto" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-violet-600 hover:bg-violet-700 dark:bg-blue-500 dark:hover:bg-blue-600 mt-auto">Contactar.</a>
+    </div>
 
-.title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  color: #fff
-}
-
-.price {
-  font-size: 3.75rem;
-  line-height: 1;
-  font-weight: 700;
-  color: #fff
-}
-
-.desc {
-  margin-top: 0.75rem;
-  margin-bottom: 0.75rem;
-  line-height: 1.625;
-  color: rgba(156, 163, 175, 1);
-}
-
-.lists {
-  margin-bottom: 1.5rem;
-  flex: 1 1 0%;
-  color: rgba(156, 163, 175, 1);
-}
-
-.lists .list {
-  margin-bottom: 0.5rem;
-  display: flex;
-  margin-left: 0.5rem
-}
-
-.lists .list svg {
-  height: 1.5rem;
-  width: 1.5rem;
-  flex-shrink: 0;
-  margin-right: 0.5rem;
-  color: rgba(167, 139, 250, 1);
-}
-
-.action {
-  border: none;
-  outline: none;
-  display: inline-block;
-  border-radius: 0.25rem;
-  background-color: rgba(167, 139, 250, 1);
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  text-align: center;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  color: rgba(17, 24, 39, 1);
-}
-</style>
+</div>

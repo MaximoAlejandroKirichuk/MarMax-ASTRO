@@ -1,0 +1,25 @@
+<script>
+    // Función para animar el desplazamiento suave
+    function scrollToElement(element) {
+        window.scroll({
+            behavior: 'smooth',
+            left: 0,
+            top: element.offsetTop,
+            duration: 7000
+        });
+    }
+
+    // Obtener todos los enlaces internos que comienzan con #
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                scrollToElement(targetElement);
+            }
+        });
+    });
+</script>

@@ -2,7 +2,7 @@
 interface Props {
 	title: string;
 }
-
+import Scroll from '../components/scroll.astro';
 const { title } = Astro.props;
 ---
 
@@ -62,3 +62,4 @@ const { title } = Astro.props;
 			monospace;
 	}
 </style>
+<Scroll />

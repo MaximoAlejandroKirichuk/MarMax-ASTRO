@@ -1,13 +1,13 @@
 ---
 interface Props {
 	body: string;
+  url: string;
 }
 
-const {body} = Astro.props;
+const {body, url} = Astro.props;
 ---
-<button class="btn">
-    {body}
-</button>
+    <a class="btn" href = {url} target="_blank" style="text-decoration: none; color: white;">{body}</a>
+
 
 <style>
     .btn {
