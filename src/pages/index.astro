@@ -1,8 +1,10 @@
 ---
+import BotonWhatsapp from '../components/botonwhatsapp.astro';
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Botones from '../components/botones.astro';
 import Header from '../components/header.astro';
+import Trabajo from '../components/comotrabajamos.astro';
 import CardInfo from '../components/card-info.astro';
 import Accordion from '../components/accordion.astro';
 import REDES from '../components/REDES.astro';
@@ -10,17 +12,19 @@ import Footer from '../components/Footer.astro';
 import Precios from '../components/precios.astro';
 import PreciosWeb from '../components/preciosWeb.astro';
 import Formulario from '../components/formulario.astro';
+import LOGOBLANCO from '../components/logo-blanco.astro';
 ---
 
 <Layout title="MarMax.">
 	<!--Header escritorio-->
-	<header id="home">
+	<header id="home" class="min-h-screen">
 		<!--Nav hecha con componente header -->
 	<Header />
 		<!--Primera pagina-->		
 		<section class="flex flex-col justify-center items-center">
 			<header>
 				<h3 class="text-white text-center text-2xl sm:text-4xl md:text-5xl font-semibold">Bienvenidos a <span class="text-gradient">MarMax</span></h3>
+			
 			</header>
 			<main>
 				<h1 class="quesomos text-white text-center text-2xl sm:text-4xl md:text-6xl">Diseño Gráfico y Desarrollo Web para Emprendedores</h1>
@@ -37,15 +41,19 @@ import Formulario from '../components/formulario.astro';
 	</header>
 	        <!--MAIN-->
 	<main class="m-12">
+		<BotonWhatsapp />		
+		</section>
 		<!--section que ofrece los productos -->
 		<section class="w-100vh">
+			
 			<!--HEADER SECTION -->
 			<header id="servicios" class="flex flex-col justify-center items-center min-h-screen">
-				<h2  class="text-center text-white text-2xl sm:text-4xl">Nuestros <span class="text-gradient">Servicios</span></h2>
+				<h2  class="text-center m-8 text-3xl sm:text-4xl font-bold text-white">Nuestros <span class="text-gradient">Servicios</span></h2>
 				<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">En MarMax, entendemos que cada emprendedor busca más que servicios; buscan una revolución digital que eleve su marca. 💻✨</p>				
 			</header>
 			<!--SERVICIOS -->
 			<main>
+				
 				<!--EDICION DE CONTENIDO AUDIOVISUAL -->
 				<article id="articuloAudiovisual" class="text-white min-h-screen">
 					<header>
@@ -53,7 +61,49 @@ import Formulario from '../components/formulario.astro';
 					</header>
 					<main>
 						<!--MAIN AUDIOVISUAL -->
-						<CardInfo>
+						<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
+							<CardInfo 
+							title="Creando historias cautivadoras" 
+							body="Conectamos emocionalmente con tu audiencia y dejamos una impresión duradera."
+							icon="bi bi-pencil"
+							/>
+							<CardInfo 
+							icon="bi bi-palette"
+							title="Desarrollando un estilo visual distintivo" 
+							body="Reflejamos la personalidad de tu marca y nos destacamos en un mercado saturado."
+							/>
+							<CardInfo 
+							icon="bi bi-zoom-in"
+							title="Incorporando efectos visuales de alta calidad" 
+							body="Mejoramos la apariencia y el atractivo de tu contenido con efectos visuales y gráficos de alta calidad."
+							/>
+							<CardInfo 
+							icon="bi bi-film"
+							title="Editando de manera dinámica y creativa" 
+							body="Damos vida a tu contenido y mantenemos a tu audiencia comprometida con técnicas de edición innovadoras y creativas."
+							/>
+							<CardInfo 
+							icon="bi bi-laptop"
+							title="Adaptando tu contenido para diferentes plataformas digitales" 
+							body="Maximizamos su alcance e impacto en diferentes plataformas digitales."
+							/>
+							<CardInfo 
+							icon="bi bi-music-note"
+							title="Incorporando música y sonido envolventes" 
+							body="Complementamos tu contenido y lo hacemos más memorable con música y sonido envolventes."
+							/> 
+							<CardInfo 
+							icon="bi bi-clock"
+							title="Entregando de manera eficiente y profesional" 
+							body="Aseguramos una experiencia sin problemas desde la edición hasta la publicación."
+							/>
+							
+							<CardInfo 
+							icon="bi bi-chat-dots"
+							title="Ofreciendo un soporte técnico altamente capacitado" 
+							body="Resolvemos cualquier duda o problema que pueda surgir, garantizando una experiencia de compra sin preocupaciones."
+							/>
+						</ul>
 							
 						<div>
 							<h2 class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance ">Preguntas Frecuentes</h2>
@@ -91,8 +141,48 @@ import Formulario from '../components/formulario.astro';
 						<h2 class="text-center m-8 text-3xl sm:text-4xl font-bold ">Desarrollo de <span class="text-gradient">Sitios Web</span></h2>
 					</header>
 					<main>
-
-						<CardInfo>
+						<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 p-4">
+							<CardInfo
+							icon="bi bi-globe"
+							title="Sitio Web Profesional" 
+							body="Destaca con un sitio web que refleje la identidad de tu marca, creando una impresión duradera en tus visitantes."
+							/>
+							<CardInfo
+							icon="bi bi-graph-up" 
+							title="Optimización para Motores de Búsqueda (SEO)" 
+							body="Mejora tu visibilidad en los motores de búsqueda con estrategias SEO efectivas, posicionando tu negocio frente a clientes potenciales."
+							/>
+							<CardInfo 
+							icon="bi bi-arrow-up-right"
+							title="Crecimiento Escalable" 
+							body="Diseña un sitio web que crezca con tu negocio, asegurando que siempre estés un paso adelante en un mercado en constante evolución."
+							/>
+							<CardInfo
+							icon="bi bi-shield-check" 
+							title="Seguridad y Protección"
+							body="Mantén tu sitio web protegido contra amenazas en línea con las últimas medidas de seguridad."
+							/>
+							<CardInfo
+							icon="bi bi-arrow-clockwise" 
+							title="Actualizaciones Continuas" 
+							body="Recibe actualizaciones regulares para garantizar que tu sitio web esté siempre al día y funcionando sin problemas."
+							/>
+							<CardInfo
+							icon="bi bi-share" 
+							title="Integración con Redes Sociales" 
+							body="Conecta con tus seguidores integrando tus perfiles de redes sociales en tu sitio web."
+							/>
+							<CardInfo
+							icon="bi bi-people" 
+							title="Aumento de la Visibilidad y Alcance" 
+							body="Aprovecha la oportunidad de llegar a una audiencia más amplia y diversa que los medios tradicionales."
+							/>
+							<CardInfo
+							icon="bi bi-envelope" 
+							title="Facilita la Comunicación y el Contacto" 
+							body="Proporciona a tus clientes un canal directo para obtener información y ponerse en contacto contigo."
+							/>
+						</ul>
 							<article>
 								<h2 class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">Preguntas Frecuentes</h2>
 								<Accordion
@@ -126,7 +216,12 @@ import Formulario from '../components/formulario.astro';
 					</article>
 				
 				</section>
-
+				<!--Como trabajamos-->
+		<section id="comoTrabajamos" class="text-white min-h-screen">
+			<h2 class="text-center m-8 text-3xl sm:text-4xl font-bold">¿Cómo<span class="text-gradient"> Trabajamos?</span></h2>
+			<p  class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">Considéranos no como una empresa externa, sino como miembros integrales de tu equipo. Juntos, llevaremos a cabo tus ideas de manera fluida y eficiente. Solo 3 pasos para hacerlo realidad.</p>
+		<Trabajo />
+		</section>
 				<!--SECTION PRECIOS -->
 				<section id="precios">
 					<!--Header precios -->
@@ -166,30 +261,51 @@ import Formulario from '../components/formulario.astro';
 			<header id="nosotros" class="flex flex-col justify-center items-center min-h-screen">
 				<h2  class="text-center text-white text-2xl sm:text-4xl">Sobre <span class="text-gradient">Nosotros</span></h2>
 				<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">🚀MarMax es mucho más que un proyecto; es nuestra visión de un futuro digital emocionante y lleno de posibilidades. </p>
-					<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">💡 Nuestra filosofía se basa en la innovación constante y la creatividad sin límites, siempre buscando nuevas formas de elevar la presencia digital de nuestros clientes y convertir sus sueños en realidad en el mundo digital.</p>		
-			</header>
-			<!--Contacto -->
-			<section id="contacto" class="contacto">
-				<article class="text-white py-12 flex flex-col justify-center items-center ">
-					<h2 class="text-center text-2xl sm:text-4xl mb-8 text-gradient">Contactate ya con nosotros</h2>
-					<Formulario />
-					<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">¡Únete a nuestra comunidad en las redes sociales para estar al tanto de todas nuestras novedades, promociones y mucho más!</p>
-					<ul id="redes" class="flex gap-2">
-						<REDES
-						icon='bi bi-facebook'
-						url='https://www.facebook.com/profile.php?id=61555324135923'
-						/>
-						<REDES
-						icon='bi bi-instagram'
-						url='https://www.instagram.com/marmax_design/'
-						/>
-						<REDES
-						icon='bi bi-envelope'
-						url='mailto:marmaxdesignlabs@gmail.com'
-						/>
-					</ul>
-					<h4 class="mt-4"><a href="mailto:Marmaxdesignlabs@gmail.com" class="texthover">Marmaxdesignlabs@gmail.com</a>
-					</h4>
+					<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">💡 Nuestra filosofía se basa en la innovación constante y la creatividad sin límites, siempre buscando nuevas formas de elevar la presencia digital de nuestros clientes y convertir sus sueños en realidad en el mundo digital.</p>
+					<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">
+						Si quieres conocernos más, te invitamos a visitar nuestro <a class="text-gradient" href="marmaxblog.netlify.app">blog</a> , donde publicamos artículos con consejos útiles para emprendedores como tú. ¡Esperamos que encuentres la información útil e inspiradora para tu camino emprendedor!	
+					</p>
+					
+				</ul>
+				<LOGOBLANCO/>
+				
+	</header>
+
+	<!--Contacto -->
+	<section id="contacto" class="contacto">
+		<article class="text-white py-12 flex flex-col justify-center items-center ">
+			<h2 class="text-center text-2xl sm:text-4xl mb-8 text-gradient">Contactate ya con nosotros</h2>
+			<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">Contactanos mediante nuestro Whatsapp o Email para llevar 
+				tu emprendimiento al siguiente nivel🚀
+			</p>
+			<h4 class="mt-4"><a href="mailto:Marmaxdesignlabs@gmail.com" class="texthover">Marmaxdesignlabs@gmail.com</a></h4>
+			<ul id="redes" class="flex gap-2 m-8">
+				<REDES
+				icon='bi bi-envelope'
+				url='mailto:marmaxdesignlabs@gmail.com'
+				/>
+				<REDES
+				icon='bi bi-whatsapp'
+				url='"https://wa.me/+5491166607667"'
+				/>
+			</ul>
+			<Formulario />
+			<p class="text-white my-8 text-xl sm:text-2xl leading-relaxed text-center m-4 text-balance">¡Únete a nuestra comunidad en las redes sociales para estar al tanto de todas nuestras novedades, promociones y mucho más!</p>
+			<ul id="redes" class="flex gap-2">
+				<REDES
+				icon='bi bi-facebook'|
+				url='https://www.facebook.com/profile.php?id=61555324135923'
+				/>
+				<REDES
+				icon='bi bi-instagram'
+				url='https://www.instagram.com/marmax_design/'
+				/>
+				<REDES
+				icon='bi bi-tiktok'
+				url='https://www.tiktok.com/@maxikirchuk?lang=en'
+				/>
+				<LOGOBLANCO/>
+					
 				</article>
 				</section>
 			
@@ -251,17 +367,6 @@ import Formulario from '../components/formulario.astro';
 		}
 		
 		</style>
-
-		<script>
-			window.embeddedChatbotConfig = {
-			chatbotId: "tutqeQjAxOaGeWgQi7vno",
-			domain: "www.chatbase.co"
-			}
-			</script>
-			<script
-			src="https://www.chatbase.co/embed.min.js"
-			chatbotId="tutqeQjAxOaGeWgQi7vno"
-			domain="www.chatbase.co"
-			defer>
-			</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
